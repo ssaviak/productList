@@ -1,0 +1,9 @@
+ .container {
+    padding: 50px;
+ }
+
+ .errorText {
+    font-size: 24px;
+    color: red;
+    text-align: center;
+ }

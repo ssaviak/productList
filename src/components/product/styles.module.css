@@ -1,0 +1,45 @@
+.productContainer {
+    padding: 20px;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  .productImage {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .productTitle {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .productCount,
+  .productWeight {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .commentsTitle {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #444;
+  }
+  
+  .comment {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+  }
+  
+  .commentDate {
+    font-size: 14px;
+    color: #999;
+  }
+  

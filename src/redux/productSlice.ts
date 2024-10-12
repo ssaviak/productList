@@ -45,12 +45,9 @@ const productSlice = createSlice({
   initialState,
   reducers: {
     editProduct: (state, action: PayloadAction<IProduct>) => {
-      const index = state.products.findIndex(
-        (product) => product.id === action.payload.id
+      state.products = state.products.map((product) =>
+        product.id === action.payload.id ? action.payload : product
       );
-      if (index !== -1) {
-        state.products[index] = action.payload;
-      }
     },
   },
   extraReducers: (builder) => {
@@ -74,13 +71,9 @@ const productSlice = createSlice({
       .addCase(deleteProduct.rejected, handleRejected)
       .addCase(updateProduct.pending, handlePending)
       .addCase(updateProduct.fulfilled, (state, action) => {
-        state.loading = false;
-        const index = state.products.findIndex(
-          (product) => product.id === action.payload.id
+        state.products = state.products.map((product) =>
+          product.id === action.payload.id ? action.payload : product
         );
-        if (index !== -1) {
-          state.products[index] = action.payload;
-        }
       })
       .addCase(updateProduct.rejected, handleRejected);
   },
